@@ -7,8 +7,10 @@ class Tree:
         self.val = val
 
     def insert(self, val, right=True):
-        if type(val) is not int or type(right) is not bool:
-            raise TypeError
+        if type(val) is not int:
+            raise TypeError('Value should be an integer.')
+        if type(right) is not bool:
+            raise TypeError('Optional parameter should be a boolean.')
         if self.val is not None:
             if right:
                 if self.right is None:
